@@ -1,20 +1,20 @@
 package main
 
 import (
-	// "fmt"
+	"fmt"
 	"log"
 	"net/http"
 	"github.com/gorilla/mux"
-	// "github.com/karthik11135/golang-backend/db"
+	"github.com/karthik11135/golang-backend/db"
 	"github.com/karthik11135/golang-backend/routes"
 )
 
 func main() {
-	// res := db.ConnectDb()
-	// if !res {
-	// 	fmt.Println("Could not is iso connect to database")
-	// 	return
-	// }
+	res := db.ConnectDb()
+	if !res {
+		fmt.Println("Could not is iso connect to database")
+		return
+	}
 
 	r := mux.NewRouter()
 
